@@ -16,6 +16,8 @@ HOST=`grep HOST installer.tmpl | awk -F\= '{ print $2 }'`
 FQDN=`grep FQDN installer.tmpl | awk -F\= '{ print $2 }'`
 DOMAIN=`grep DOMA installer.tmpl | awk -F\= '{ print $2 }'`
 
+export HOST FQDN DOMAIN
+
 sh inline-edit.sh __DOMAIN__  $DOMAIN maiad.conf
 sh inline-edit.sh __HOST__ $HOST maiad.conf
 sh inline-edit.sh yourdomain.tld  $DOMAIN maiad.conf
