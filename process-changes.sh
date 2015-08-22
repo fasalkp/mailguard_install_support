@@ -18,5 +18,7 @@ DOMAIN=`grep DOMA installer.tmpl | awk -F\= '{ print $2 }'`
 
 sh inline-edit.sh __DOMAIN__  $DOMAIN maiad.conf
 sh inline-edit.sh __HOST__ $HOST maiad.conf
+sh inline-edit.sh yourdomain.tld  $DOMAIN maiad.conf
+sh inline-edit.sh host.domain.tld $HOST maiad.conf
 
 
